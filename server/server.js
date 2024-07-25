@@ -6,13 +6,14 @@ import dotenv from 'dotenv'
 const app = express()
 dotenv.config();
 const PORT = 5500||process.env.PORT
-const MongoDB = process.env.MONGODB
+const MONGOID = process.env.MONGOID
+const MONGOPASS = process.env.MONGOPASS
 app.use(cors('https://chatclone-one.vercel.app/'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use('/', route)
 
-mongoose.connect(MongoDB,{
+mongoose.connect(`mongodb+srv://${MONGOID}:${MONGOPASS}@cluster0.13njzdi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
