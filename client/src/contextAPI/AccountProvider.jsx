@@ -11,7 +11,8 @@ const  AccountProvider=({children})=>{
         const socket = useRef();
         
         useEffect(()=>{
-                socket.current = io('wss://chatclone-1.onrender.com')
+                // socket.current = io('wss://chatclone-1.onrender.com')
+                socket.current = io('ws://localhost:9000')
         },[])
 
 return(

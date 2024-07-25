@@ -1,10 +1,10 @@
 import { Server } from "socket.io";
 import dotenv from 'dotenv'
 dotenv.config();
-const PORT = 9000||process.env.PORT
-const io = new Server(PORT, {
+// const PORT = 9000||process.env.PORT
+const io = new Server(9000, {
     cors: {
-        origin: '*'
+        origin: 'http://localhost:3000'
     }
 })
 let users = []
@@ -20,7 +20,7 @@ const addUser = (userData, socketId) => {
     // users.push({...userData, socketId})
 }
 io.on('connection', (socket) => {
-    console.log('user connected')
+    console.log('user connected PORT NO')
 
     socket.on("addUsers", userData => {
         
@@ -35,6 +35,10 @@ io.on('connection', (socket) => {
     })
 })
 
+
+// client - https://chatclone-one.vercel.app/
+// server - https://chatclone-458j.onrender.com
+// socket - https://chatclone-1.onrender.com
 
 
 // import { Server } from "socket.io";
