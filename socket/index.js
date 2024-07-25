@@ -1,5 +1,6 @@
 import { Server } from "socket.io";
-PORT = 9000||process.env.PORT
+dotenv.config();
+const PORT = 9000||process.env.PORT
 const io = new Server(PORT, {
     cors: {
         origin: 'https://chatclone-one.vercel.app/'
