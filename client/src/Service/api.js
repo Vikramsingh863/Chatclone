@@ -1,5 +1,6 @@
 import axios from 'axios'
-const url= 'https://chatclone-458j.onrender.com'
+// const url= 'https://chatclone-458j.onrender.com';
+const url= 'http://localhost:5500'
 
 export const addUser =async (data)=>{
     try {

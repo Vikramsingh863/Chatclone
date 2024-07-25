@@ -1,4 +1,5 @@
 import express from 'express'
+
 import mongoose from 'mongoose'
 import route from './routes/Routes.js'
 import cors from "cors"
@@ -8,7 +9,7 @@ dotenv.config();
 const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
-app.use(cors())
+app.use(cors('http://localhost:3000'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use('/', route)
