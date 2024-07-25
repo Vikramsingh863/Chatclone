@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 // import { GridFSBucket } from 'mongodb';
 import mongoose from 'mongoose';
-const url = "http://localhost:5500";
+const url = "https://chatclone-458j.onrender.com";
 let gfs, gridfsBucket;
 const conn = mongoose.connection;
 conn.once('open',()=>{
