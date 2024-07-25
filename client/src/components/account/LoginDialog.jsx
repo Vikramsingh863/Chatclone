@@ -57,21 +57,7 @@ const LoginDialog = () => {
         console.log("error")
     }
 
-    // Twillo
-    // const accountSid = 'AC45a7322d43315ffe0aa6fbaa2f50f774';
-    // const authToken = '10ddfdb1c36b0186638f7aaf8e6a27ee';
-    // const client = require('twilio')(accountSid, authToken);
-
-    // client.messages
-    //     .create({
-    //         body: 'This is a trial message ',
-    //         from: '+17176198271',
-    //         to: '+919649215986'
-    //     })
-    //     .then(message => console.log(message.sid))
-    //     .done();
-
-
+    
 
     return (
         <Dialog
