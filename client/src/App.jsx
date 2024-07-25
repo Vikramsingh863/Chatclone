@@ -10,7 +10,7 @@ import AccountProvider from './contextAPI/AccountProvider';
 
 function App() {
 const clientId= '205688264647-h04om6jv0sj4kdj15g9lc61ctpfuiqjc.apps.googleusercontent.com'
-// const clientSecret ='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'
+
   return (
     <GoogleOAuthProvider clientId={clientId}>
       <AccountProvider>

@@ -7,12 +7,12 @@ const app = express()
 dotenv.config();
 const PORT = 5500||process.env.PORT
 const MongoDB = process.env.MONGODB
-app.use(cors('http://localhost:3000/'))
+app.use(cors('https://chatclone-one.vercel.app/'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use('/', route)
 
-mongoose.connect(`mongodb+srv://vikramsinghmertiya863:Mertiya0564@cluster0.13njzdi.mongodb.net/Chatapp?retryWrites=true&w=majority&appName=Cluster0`,{
+mongoose.connect(MongoDB,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
