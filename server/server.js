@@ -9,6 +9,16 @@ dotenv.config();
 const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
+
+app.use((req, res, next) => {
+  const allowedOrigins = '*';
+  
+  res.header('Access-Control-Allow-Origin', '*');
+  
+  
+  return next();
+});
+
 const corsOptions = {
   origin:"*",
   methods: 'GET,POST',
