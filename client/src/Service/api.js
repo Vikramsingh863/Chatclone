@@ -65,7 +65,7 @@ export const getConversation = async(data)=>{
  
  export const uploadFile = async(data)=>{
     try {
-        console.log("sdf")
+        
         return await axios.post(`${url}/file/upload`,data);
 
     } catch (error) {

@@ -1,7 +1,8 @@
 import grid from 'gridfs-stream';
 // import { GridFSBucket } from 'mongodb';
 import mongoose from 'mongoose';
-const url = "https://chatclone-458j.onrender.com";
+const url = 'https://chatclone-458j.onrender.com';
+// const url = 'http://localhost:5500';
 let gfs, gridfsBucket;
 const conn = mongoose.connection;
 conn.once('open',()=>{
@@ -17,7 +18,7 @@ export const uploadFile = async(request, response)=>{
 
         return response.status(404).json('file not found');
     }
-    console.log(request.body)
+    
     const imageUrl = `${url}/file/${request.file.filename}`;
     return response.status(200).json(imageUrl)
 }

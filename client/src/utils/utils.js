@@ -6,7 +6,6 @@ export const formateDate=(date)=>{
 }
 
 
-
 export const downloadMedia = async (e, originalImage) => {
     e.preventDefault();
     try {
@@ -35,20 +34,4 @@ export const downloadMedia = async (e, originalImage) => {
 }
 
 
-// export const downloadMedia=(e,originalImage)=>{
-    
-//     const a = document.createElement('a')
-//     const url = window.URL.createObjectURL(originalImage.blob);
-            
-//             a.style.display = 'none';
-//             a.href = url;
-//     a.href = url;
-    
-    
-//     a.download = "vikram_" + originalImage.split('/').pop();
-//     a.setAttribute('download',a.download);
-//     document.body.appendChild(a)
-//     a.click();
-
-// }
 

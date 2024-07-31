@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useEffect ,useRef} from 'react';
 import { uploadFile } from '../../../Service/api';
 import SendIcon from '@mui/icons-material/Send';
+
 const Container= styled(Box)`
  
     height: 55px;
@@ -40,12 +41,11 @@ font-size:14px;
 
 const Footer = ({sendText, setValue, value ,file, setFile, setImage}) => {
 const inputref = useRef(null)
-
+const url = "https://chatclone-458j.onrender.com"
 // useEffect(()=>{
 //     sendText(e)
 // },[])
   
-
 useEffect(()=>{
     const getImage =async ()=>{
         if(file){
@@ -55,6 +55,7 @@ useEffect(()=>{
 
             
           let response=   await uploadFile(data);
+          console.log(response)
           setImage(response.data);
         }
         
@@ -64,7 +65,7 @@ useEffect(()=>{
 
 
     const onFileChange=(e)=>{
-        console.log(e.target.files)
+        
         setFile(e.target.files[0]);
         setValue(e.target.files[0].name)
     }
