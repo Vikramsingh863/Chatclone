@@ -4,7 +4,8 @@ dotenv.config();
 const PORT = 9000||process.env.PORT
 const io = new Server(PORT, {
     cors: {
-        origin: 'http://localhost:3000'
+        // origin: 'http://localhost:3000'
+        origin: 'https://chatclone-one.vercel.app'
     }
 })
 let users = []

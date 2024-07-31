@@ -10,7 +10,9 @@ const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
 app.use(cors({
-  origin:"https://chatclone-one.vercel.app"
+  origin:"https://chatclone-one.vercel.app",
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type: multipart/form-data',
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
