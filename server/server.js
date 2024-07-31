@@ -10,7 +10,7 @@ const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
 const corsOptions = {
-  origin:"https://chatclone-one.vercel.app",
+  origin:"*",
   methods: 'GET,POST',
   allowedHeaders: '*', 
 }
