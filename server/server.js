@@ -12,7 +12,7 @@ const MONGOPASS = process.env.MONGOPASS
 app.use(cors({
   origin:"https://chatclone-one.vercel.app",
   methods: 'GET,POST',
-  allowedHeaders: 'Content-Type: multipart/form-data',
+  allowedHeaders: '*',
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
