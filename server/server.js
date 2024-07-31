@@ -9,9 +9,20 @@ dotenv.config();
 const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
-
+const allowedOrigins = [
+  'https://chatclone-one.vercel.app',
+  'https://chatclone-one.vercel.app/',
+  'https://chatclone-one.vercel.app/:1'
+];
 const corsOptions = {
-  origin: 'https://chatclone-one.vercel.app/', // Replace with your frontend URL
+  origin: (origin, callback) => {
+    // Check if the origin is in the allowedOrigins array
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
   allowedHeaders: 'Content-Type,Authorization', // Allowed headers
   credentials: true, // Allow credentials (cookies, etc.)
