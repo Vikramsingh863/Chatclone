@@ -9,12 +9,12 @@ dotenv.config();
 const PORT = 5500||process.env.PORT
 const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
-app.use(cors({
-  origin:"https://chatclone-one.vercel.app",
+const corsOptions = {
+  origin:"*",
   methods: 'GET,POST',
-  allowedHeaders: '*',
-  
-}))
+  allowedHeaders: '*', 
+}
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 app.use('/', route)
