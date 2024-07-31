@@ -13,6 +13,7 @@ app.use(cors({
   origin:"https://chatclone-one.vercel.app",
   methods: 'GET,POST',
   allowedHeaders: '*',
+  
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
