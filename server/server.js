@@ -11,7 +11,7 @@ const MONGOID = process.env.MONGOID
 const MONGOPASS = process.env.MONGOPASS
 
 const corsOptions = {
-  origin: 'https://chatclone-one.vercel.app/, https://chatclone-one.vercel.app', // Replace with your frontend URL
+  origin: 'https://chatclone-one.vercel.app/', // Replace with your frontend URL
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
   allowedHeaders: 'Content-Type,Authorization', // Allowed headers
   credentials: true, // Allow credentials (cookies, etc.)
