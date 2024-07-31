@@ -68,7 +68,7 @@ export const getConversation = async(data)=>{
         
         return await axios.post(`${url}/file/upload`,data,
             {headers:{
-                'Content-Type':'multipart/form-data',
+                
                 'Accept': '*/*'
             }}
         );
