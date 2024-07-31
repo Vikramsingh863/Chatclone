@@ -6,6 +6,7 @@ import { newConversation, getConversation } from '../Controller/conversation-con
 import { newMessage, getMessages } from '../Controller/message-controller.js'
 import {uploadFile, getImage} from '../Controller/image-controller.js'
 import upload from '../utils/upload.js'
+import cors from "cors";
 const corsOptions = {
     origin:"*",
   }
